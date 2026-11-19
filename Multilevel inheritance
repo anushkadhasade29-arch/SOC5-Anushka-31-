@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+class Vehicle
+{
+    public:
+    string brand;
+
+    void getdata1()
+    {
+        cout<<"Enter Vehicle Brand:"<<endl;
+        cin>>brand;
+    }
+
+    void display1()
+    {
+        cout<<"Vehicle Brand is:"<<brand<<endl;
+    }
+};
+class Car:public Vehicle
+{
+    public:
+    string model;
+
+    void getdata2()
+    {
+        cout<<"Enter Car Model:"<<endl;
+        cin>>model;
+    }
+
+    void display2()
+    {
+        cout<<"Car Model:"<<model<<endl;
+    }
+};
+class ElectricVehicle:public Car
+{
+    public:
+    int battery;
+
+    void getdata3()
+    {
+        cout<<"Enter Battery Capacity (kWh):"<<endl;
+        cin>>battery;
+    }
+
+    void display3()
+    {
+        cout<<"Battery Capacity (kWh) is:"<<battery<<"kWh"<<endl;
+    }
+};
+
+int main()
+{
+    
+    ElectricVehicle e;
+    e.getdata1();
+    e.getdata2();
+    e.getdata3();
+    e.display1();
+    e.display2();
+    e.display3();
+    return 0;
+}
