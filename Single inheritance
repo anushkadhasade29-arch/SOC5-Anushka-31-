@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+class Person
+{
+     public:
+     int age;
+     string name;
+     void getdata()
+     {
+          cout<<"Enter age:"<<endl;
+          cin>>age;
+          cout<<"Enter name:"<<endl;
+          cin>>name;
+     }
+     void display()
+     {
+          cout<<"The age is:"<<age<<endl;
+          cout<<"The name is:"<<name<<endl;
+      }
+};
+class Student:public Person
+{
+      public:
+      int roll_no;
+      float marks;
+      void input()
+      {
+           cout<<"Enter roll_no:"<<endl;
+           cin>>roll_no;
+           cout<<"Enter marks:"<<endl;
+           cin>>marks;
+      }
+      void output()
+      {
+           cout<<"The age is:"<<age<<endl;
+           cout<<"The name is:"<<name<<endl;
+           cout<<"The roll_no is:"<<roll_no<<endl;
+           cout<<"The marks is:"<< marks<<endl;
+      }
+};
+int main()
+{
+Student s;
+s.getdata();
+s.display();
+s.input();
+s.output();
+return 0;
+}
