@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class Calculator 
+{ 
+     private:
+     int num;
+     public:
+     int add(int a, int b)
+     {
+          return a + b;
+     }
+     int add(int a, int b, int c)
+     {
+          return a + b + c;
+     }
+};
+int main()
+{
+     cout<<"The additiona of a + b is:"<<cal(3, 4)<<endl;
+     cout<<"The additiona of a + b + c is:"<<cal(3, 4, 5)<<endl;
+     Calculator cal;
+     cal.add(3, 4);
+     cal.add(3,4,5);
+     return 0;
+ }
